@@ -1,0 +1,758 @@
+/* --- Add this block --- */
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Extralight.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Extralight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraLight Italic */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-ExtralightItalic.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-ExtralightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Light.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-LightItalic.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Regular.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Italic.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium Italic */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-MediumItalic.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold Italic */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-SemiboldItalic.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Bold.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/GeneralSans-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: "General Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "General Sans", sans-serif;
+  font-weight: 700;
+}
+
+.font-bold {
+  font-weight: 600 !important;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+/* CTA CSS */
+
+.bg_img {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/imgs/d2c-growth.webp");
+  background-position: 100% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Spinner */
+.sr-container {
+  text-align: center;
+  color: #1f2937;
+  max-width: 800px;
+  padding: 30px;
+}
+
+.sr-h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  color: #06b6d4;
+  font-weight: 700;
+}
+
+.sr-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  color: #4b5563;
+}
+
+.sr-btn {
+  background: #06b6d4;
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(6, 182, 212, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sr-btn:hover {
+  background: #03a7c1;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(6, 182, 212, 0.3);
+}
+
+.sr-btn:active {
+  transform: translateY(0);
+}
+
+/* Popup Styles */
+.sr-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.sr-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sr-popup-content {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+
+.sr-popup.active .sr-popup-content {
+  transform: scale(1);
+}
+
+.sr-popup-body {
+  padding: 25px;
+}
+
+.sr-form-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sr-form-intro h2 {
+  font-size: 1.5rem;
+  color: #06b6d4;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.sr-form-intro p {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sr-form-grid {
+  margin-bottom: 20px;
+}
+
+.sr-form-group {
+  margin-bottom: 15px;
+}
+
+.sr-form-group.full-width {
+  grid-column: span 2;
+}
+
+.sr-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.sr-form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s;
+  background-color: #f9fafb;
+}
+
+.sr-form-control:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+textarea.sr-form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* .sr-popup-footer {
+  padding: 15px 25px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+} */
+
+.sr-btn-submit {
+  background: #06b6d4;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.sr-btn-submit:hover {
+  background: #03a7c1;
+}
+
+.sr-btn-submit:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.sr-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: all 0.3s;
+  background: #e5e7eb;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sr-close-btn:hover {
+  background: #d1d5db;
+  transform: rotate(90deg);
+}
+
+/* Custom close icon using CSS */
+.sr-close-btn::before {
+  content: "×";
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sr-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sr-form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .sr-h1 {
+    font-size: 2.5rem;
+  }
+
+  .sr-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sr-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .sr-popup-content {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .sr-popup-body {
+    padding: 20px;
+  }
+}
+
+/* Exit Intent Popup Styles - Add to your style.css */
+
+.exit-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  overflow-y: auto;
+  padding: 20px;
+  animation: exitFadeIn 0.3s ease;
+}
+
+.exit-popup-overlay.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-popup-content {
+  background: white;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: exitSlideDown 0.4s ease;
+  margin: auto;
+}
+
+.exit-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  line-height: 1;
+}
+
+.exit-close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.exit-popup-body {
+  padding: 50px 40px 40px;
+}
+
+.exit-form-intro h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.exit-form-intro p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.exit-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.exit-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.exit-form-group label {
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.optional-text {
+  color: #999;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.exit-form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.exit-form-control:focus {
+  outline: none;
+  border-color: #06b6d4;
+}
+
+.exit-form-control::placeholder {
+  color: #999;
+}
+
+.exit-popup-footer {
+  margin-top: 25px;
+}
+
+.exit-btn-submit {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exit-btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+  background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+}
+
+/* Animations */
+@keyframes exitFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes exitSlideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .exit-popup-body {
+    padding: 40px 25px 30px;
+  }
+
+  .exit-form-intro h2 {
+    font-size: 24px;
+  }
+
+  .exit-form-intro p {
+    font-size: 14px;
+  }
+
+  .exit-close-btn {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 28px;
+  }
+}
+
+.footer-logo img {
+  max-width: 55%;
+}
+
+/* Privacy Policy  */
+
+.privacy-policy {
+    width: 1140px;
+    display: block;
+    margin: auto;
+    padding: 8rem 0 4rem 0;
+}
+
+.privacy-policy h1, 
+.privacy-policy h2, 
+.privacy-policy h3, 
+.privacy-policy h4, 
+.privacy-policy h5, 
+.privacy-policy h6, 
+.privacy-policy p, 
+.privacy-policy span, 
+.privacy-policy button, 
+.privacy-policy a {
+    margin-bottom: 20px !important;
+}
+
+.privacy-policy h1, 
+.privacy-policy h2, 
+.privacy-policy h3, 
+.privacy-policy h4, 
+.privacy-policy h5, 
+.privacy-policy h6 
+{
+    color: rgba(17, 24, 39, 1);
+}
+
+.privacy-policy p, 
+.privacy-policy span,
+.privacy-policy li,  
+.privacy-policy button, 
+.privacy-policy a {
+    color: rgba(75, 85, 99, 1);
+}
+
+.privacy-policy h1 {
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+.privacy-policy h2{
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.privacy-policy h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+}
+
+.privacy-policy ul, 
+.privacy-policy ol {
+    margin: 0 40px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy ul li, 
+.privacy-policy ol li {
+    list-style: disc;
+}
+
+/* Terms & Conditions */
+
+.terms-and-conditions {
+    width: 1140px;
+    display: block;
+    margin: auto;
+    padding: 8rem 0 4rem 0;
+}
+
+.terms-and-conditions h1, 
+.terms-and-conditions h2, 
+.terms-and-conditions h3, 
+.terms-and-conditions h4, 
+.terms-and-conditions h5, 
+.terms-and-conditions h6, 
+.terms-and-conditions p, 
+.terms-and-conditions span, 
+.terms-and-conditions button, 
+.terms-and-conditions a {
+    margin-bottom: 20px !important;
+}
+
+.terms-and-conditions h1, 
+.terms-and-conditions h2, 
+.terms-and-conditions h3, 
+.terms-and-conditions h4, 
+.terms-and-conditions h5, 
+.terms-and-conditions h6 
+{
+    color: rgba(17, 24, 39, 1);
+}
+
+.terms-and-conditions p, 
+.terms-and-conditions span, 
+.terms-and-conditions li,
+.terms-and-conditions button, 
+.terms-and-conditions a {
+    color: rgba(75, 85, 99, 1);
+}
+
+.terms-and-conditions h1 {
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+.terms-and-conditions h2{
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.terms-and-conditions h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+}
+
+.terms-and-conditions ul, 
+.terms-and-conditions ol {
+    margin: 0 40px;
+    margin-bottom: 20px;
+}
+
+.terms-and-conditions ul li, 
+.terms-and-conditions ol li {
+    list-style: disc;
+}
+
+@media (max-width: 768px) {
+    .privacy-policy {
+      width: auto;
+      display: block;
+      margin: auto;
+      padding: 8rem 1.25rem 3rem 1.25rem;
+   }
+
+   .terms-and-conditions {
+      width: auto;
+      display: block;
+      margin: auto;
+      padding: 8rem 1.25rem 3rem 1.25rem;
+   }
+
+   .privacy-policy h1,
+   .terms-and-conditions h1 {
+      font-size: 2.5rem;
+      line-height: 1.25;
+   }
+
+   .privacy-policy h2,
+   .terms-and-conditions h2{
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+   }
+
+   .privacy-policy h3,
+   .terms-and-conditions h3{
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+   }
+} 
+
